@@ -1,0 +1,45 @@
+{
+  "name": "bdh-task-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=24.16.0 <25"
+  },
+  "packageManager": "npm@11.13.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "build:ios": "expo run:ios",
+    "ios": "expo start --dev-client --ios",
+    "web": "expo start --web --localhost",
+    "tunnel": "expo start --dev-client --tunnel",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "test": "node --test tests/tasks.test.mjs tests/prepare-pr.test.mjs",
+    "check": "npm run typecheck && npm run lint && npm test",
+    "test:ui": "maestro test --test-output-dir .workshop/maestro .maestro/smoke.yaml",
+    "pr": "node scripts/prepare-pr.mjs",
+    "export": "expo export --platform all"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.17",
+    "expo": "~57.0.30",
+    "expo-build-properties": "~57.0.22",
+    "expo-dev-client": "~57.0.20",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@expo/ngrok": "^4.1.3",
+    "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~57.0.2",
+    "expo-doctor": "^1.21.5",
+    "typescript": "~6.0.3"
+  }
+}

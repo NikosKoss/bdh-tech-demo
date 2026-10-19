@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "BDH Task Workshop",
+    "slug": "bdh-task-workshop",
+    "scheme": "bdh-task-workshop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "web"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.example.bdhtaskworkshop"
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "BDH Task Workshop"
+    },
+    "plugins": [
+      ["expo-build-properties", { "ios": { "enableSceneSupport": true } }]
+    ]
+  }
+}

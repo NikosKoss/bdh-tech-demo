@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# Unified patches contain intentional space-prefixed blank context lines.
+*.patch -whitespace

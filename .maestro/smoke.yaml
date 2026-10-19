@@ -1,0 +1,53 @@
+appId: com.example.bdhtaskworkshop
+env:
+  DEV_URL: "bdh-task-workshop://expo-development-client/?url=http%3A%2F%2F127.0.0.1%3A8081"
+---
+# Restart our development build to reset in-memory tasks, then connect to Metro.
+- stopApp
+- openLink: ${DEV_URL}
+- tapOn:
+    text: Open
+    optional: true
+- extendedWaitUntil:
+    visible: "My tasks"
+    timeout: 60000
+- assertVisible: "5 open · 3 completed"
+- assertVisible:
+    id: add-task
+    enabled: false
+- takeScreenshot: starter
+- tapOn:
+    id: new-task-title
+    retryTapIfNoChange: true
+- inputText: "Maestro added this task"
+- assertVisible:
+    id: add-task
+    enabled: true
+- tapOn:
+    id: priority-high
+# Keep the keyboard open while pressing Add.
+- takeScreenshot: keyboard
+- tapOn:
+    id: add-task
+# The app dismisses the keyboard after adding; verify the resulting state.
+- assertVisible: "6 open · 3 completed"
+- assertVisible: "Maestro added this task. high priority. Open"
+- tapOn: "Maestro added this task. high priority. Open"
+- assertVisible: "5 open · 4 completed"
+- assertVisible: "Maestro added this task. high priority. Completed"
+- tapOn: "Maestro added this task. high priority. Completed"
+- assertVisible: "6 open · 3 completed"
+- assertVisible: "Maestro added this task. high priority. Open"
+- takeScreenshot: reopened
+- scrollUntilVisible:
+    element:
+      id: task-5
+    direction: DOWN
+    timeout: 20000
+- takeScreenshot: long-titles
+- scrollUntilVisible:
+    element:
+      id: task-8
+    direction: DOWN
+    timeout: 20000
+- takeScreenshot: list-bottom

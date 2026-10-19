@@ -1,0 +1,13 @@
+node_modules/
+.expo/
+dist/
+coverage/
+.workshop/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+npm-debug.log*
+ios/
+android/
