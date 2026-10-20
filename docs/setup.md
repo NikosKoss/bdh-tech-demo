@@ -2,7 +2,7 @@
 
 ## Get your copy
 
-1. Open the [workshop template](https://github.com/NikosKoss/bdh-tech-lesson) and choose **Use this template → Create a new repository**. Name your copy `bdh-task-workshop`.
+1. Open the [workshop template](https://github.com/NikosKoss/bdh-tech-demo) and choose **Use this template → Create a new repository**. Name your copy `bdh-task-workshop`.
 2. Install [Node.js 24](https://nodejs.org/en/download), [Git](https://git-scm.com/downloads), and your editor/assistant. Reopen Terminal or PowerShell.
 3. Replace `YOUR_USERNAME` and run:
 
