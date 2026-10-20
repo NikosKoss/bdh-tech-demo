@@ -41,17 +41,17 @@ Without an agent, run `npm run check` and `npm run test:ui` after [setup](../doc
 
 ## Finish without an agent
 
-With an agent, ask: **Commit, push, and draft a PR for my changes.** It will provide a prefilled link.
+With an agent, ask: **Commit, push, and create a draft PR for my changes.** It will use GitHub CLI and provide the PR link.
 
-Without one, use the saved summary:
+Without one, read `examples/pr-example.md` and update its checks to match what you actually ran. Then run:
 
 ```sh
 git add src/components/TaskItem.tsx src/components/TaskList.tsx
 git commit -m "Improve task styling"
 git push -u origin workshop/task-redesign
-npm run pr -- examples/pr-example.md
+gh pr create --draft --base main --title "Improve task readability with calm cards" --body-file examples/pr-example.md
 ```
 
-If using a draft from browser chat, save it to `.workshop/pr.md` with a first line starting `# Your PR title`, then the description. Run `npm run pr` instead of the final command above.
+For browser chat, ask it to write a PR title and summary. Save the summary to `.workshop/pr-body.md` (create the folder if needed). Use its title in `--title` and `.workshop/pr-body.md` in `--body-file` in the final command above.
 
-Open the printed link, read the title and summary, and glance at the changed files. The saved summary marks checks as not recorded; update the draft if you have results to include. Follow the [README's review and submit steps](../README.md#3-check-your-work-and-open-a-pr).
+Open the printed PR link, read the title and summary, and glance at **Files changed**. Then click **Ready for review** on the **Conversation** tab. Follow the [README's review steps](../README.md#3-check-your-work-and-open-a-pr).

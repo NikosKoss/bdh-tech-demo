@@ -16,10 +16,9 @@
     "tunnel": "expo start --dev-client --tunnel",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings 0",
-    "test": "node --test tests/tasks.test.mjs tests/prepare-pr.test.mjs",
+    "test": "node --test tests/tasks.test.mjs",
     "check": "npm run typecheck && npm run lint && npm test",
     "test:ui": "maestro test --test-output-dir .workshop/maestro .maestro/smoke.yaml",
-    "pr": "node scripts/prepare-pr.mjs",
     "export": "expo export --platform all"
   },
   "dependencies": {

@@ -13,7 +13,25 @@ npm ci
 npm run check
 ```
 
-Sign in to GitHub through your editor. This starter uses Node **24.16.0** and npm **11.13.0**.
+This starter uses Node **24.16.0** and npm **11.13.0**.
+
+Install [GitHub CLI](https://cli.github.com/) to let your agent create the draft PR:
+
+- **Mac with Homebrew:** `brew install gh`
+- **Windows PowerShell:** `winget install --id GitHub.cli --source winget`
+
+Other downloads are on the [installation page](https://github.com/cli/cli#installation). Reopen your terminal and run:
+
+```sh
+gh auth login
+```
+
+Choose **GitHub.com**, **HTTPS**, and **Log in with a web browser**. Complete the sign-in yourself, then connect Git to that login and confirm it worked:
+
+```sh
+gh auth setup-git
+gh auth status
+```
 
 Optional: explore [student offers for ChatGPT Plus and Codex credits](student-offers.md).
 

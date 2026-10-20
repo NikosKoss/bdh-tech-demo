@@ -59,13 +59,13 @@ Say **Device Hub** instead if that is your app's name. Computer use lets the age
 
 When you're ready, ask:
 
-> Commit, push, and draft a PR for my changes.
+> Commit, push, and create a draft PR for my changes.
 
-The agent selects the exercise files, writes the summary, and gives you a link to a prefilled GitHub PR form.
+The agent commits and pushes your changes, then uses GitHub CLI (`gh`) to create a **draft pull request** with the title and summary filled in. It gives you the PR link.
 
 1. Open the link. Confirm the repository is yours and the base branch is `main`.
 2. Read the title and summary. Check that they describe your design and the testing you actually did.
-3. Glance through the changed files shown on the comparison page. If something looks unrelated or wrong, ask the agent to fix it and refresh the draft.
-4. Click **Create pull request**. Leave the practice PR open.
+3. Open **Files changed** and glance through the edits. If something looks unrelated or wrong, ask the agent to update the same PR.
+4. Return to **Conversation** and click **Ready for review**. Leave the practice PR open.
 
-For browser chat, save its draft to `.workshop/pr.md` and run the [saved Git commands](examples/conversation.md#finish-without-an-agent) locally, using `npm run pr` to get a link to your AI-written draft.
+For browser chat, follow the [saved Git and GitHub CLI commands](examples/conversation.md#finish-without-an-agent) to create the draft PR with its AI-written summary.
