@@ -15,6 +15,8 @@ npm run check
 
 Sign in to GitHub through your editor. This starter uses Node **24.16.0** and npm **11.13.0**.
 
+Optional: explore [student offers for ChatGPT Plus and Codex credits](student-offers.md).
+
 ## Mac: build once, then test
 
 Install free [Xcode and an iOS simulator](https://docs.expo.dev/workflow/ios-simulator/). Complete Xcode's first launch, install an iOS runtime in **Settings → Components**, and select Xcode in **Locations → Command Line Tools**. Open one iPhone simulator.
